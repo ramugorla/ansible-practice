@@ -1,0 +1,22 @@
+- name: install nginx and run
+  hosts: local
+  connection: local
+  tasks:
+    - name: install nginx if RHEL
+      ansible.builtin.dnf:
+        name: nginx
+        state: present
+    - name: run nginx 
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: yes 
+      when: ansible_os_family == "RedHat"
+
+    - name: install nginx if ubuntu
+      ansible.builtin.apt:
+        name: nginx
+        state: present
+      when: ansible_os_familiy == "Debian"
+
+
