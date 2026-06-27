@@ -2,5 +2,5 @@
   hosts: local
   connection: local
   tasks:
-    ansible.builtin.ping:
-    
+    - name: ping the server
+      ansible.builtin.ping:
