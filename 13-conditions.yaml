@@ -5,6 +5,9 @@
     - name: my_number
       prompt: "please enter number:: "
   tasks:
+    - name: Convert user prompt string to integer
+      ansible.builtin.set_fact:
+        user_integer: "{{ my_number | ansible.builtin.int }}"
     - name: print if number is greater than 10 
       ansible.builtin.debug:
         msg: "Given number {{ my_number }} is greater than 10"
