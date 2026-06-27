@@ -4,7 +4,7 @@
   vars:
     COURSE: "Devops with Cloud"
     DURATION: 120
-  live: true
+    live: true
   topics:
     - Terraform
     - shell
