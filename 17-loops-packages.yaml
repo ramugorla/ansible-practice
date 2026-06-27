@@ -1,0 +1,13 @@
+- name: installing multiple packages 
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+    - name: install multiple services 
+      ansible.builtin.package:
+        name: "{{ item}}"
+        state: installed
+      loop:
+        - gcc
+        - git 
+        - zip 
