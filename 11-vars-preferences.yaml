@@ -5,10 +5,10 @@
     GREET: "PLAYS"
   # vars_files:
   #   - course.yaml
-  vars_prompt:
-    - name: GREET
-      prompt: Please eneter wishes
-      private: false
+  # vars_prompt:
+  #   - name: GREET
+      # prompt: Please eneter wishes
+      # private: false
   tasks:
     - name: finding varaible preference
       # vars:
@@ -20,3 +20,5 @@
 #1. Arguments
 #2. TASKS
 #3. Files
+#4. Prompt
+#5. 
