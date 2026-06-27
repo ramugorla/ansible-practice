@@ -1,8 +1,9 @@
 - name: print the number greater than 10 
   hosts: local
   connection: local
-  vars: 
-    my_number: 15
+  vars_prompt: 
+    - name: my_number
+      prompt: "please enter number:: "
   tasks:
     - name: print if number is greater than 10 
       ansible.builtin.debug:
@@ -12,4 +13,4 @@
       ansible.builtin.debug:
         msg: "Given number {{ my_number }} is less than or eqaul to 10"
       when: my_number <= 10 
-      
+
