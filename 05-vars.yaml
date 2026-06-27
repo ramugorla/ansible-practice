@@ -1,0 +1,6 @@
+- name: print variables
+  hosts: web 
+  tasks:
+    - name: print course information with variable values
+      ansible.builtin.debug:
+        msg: "Course is Devops with AWS, duration is 120HRS and Trainer is Siva kumar"
