@@ -4,3 +4,11 @@
   tasks:
     - name: ping the server
       ansible.builtin.ping:
+
+
+- name: PING1
+  hosts: web 
+  tasks:
+    - name: Ping the server
+      ansible.builtin.ping: 
+
