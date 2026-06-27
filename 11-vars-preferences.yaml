@@ -11,10 +11,11 @@
       private: false
   tasks:
     - name: finding varaible preference
-      vars:
-        GREET: "TASKS"
+      # vars:
+      #   GREET: "TASKS"
       ansible.builtin.debug:
         msg: "Hello from {{ GREET }}"
 
 
 #1. Arguments
+#2. TASKS
