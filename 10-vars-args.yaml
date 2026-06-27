@@ -1,0 +1,7 @@
+- name: argumnets
+  hosts: local
+  connection: local
+  tasks:
+    - name: argumnets through CLI
+      ansible.builtin.debug:
+        msg: "Course is {{ COURSE }}, duration is {{ DURATION }} and Trainer is {{ TRAINER }}"
