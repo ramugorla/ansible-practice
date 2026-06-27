@@ -5,15 +5,15 @@
     DURATION: 10HRS
     TRAINER: "Ramu"
   tasks:
-    - name: TASKS variables
+    - name: TASKS variables  # Local variables which are going to override the values of global variables (PLAY Level varaibles)
       vars:
-        COURSE: "Devops with AWS"
+        COURSE: "Devops with AWS" 
         DURATION: 120HRS
         TRAINER: "Siva"
       ansible.builtin.debug:
         msg: "Course is {{ COURSE }}, duration is {{ DURATION }} and Trainer is {{ TRAINER }}"
   
   
-    - name: PLAYS variables
+    - name: PLAYS variables  
       ansible.builtin.debug:
         msg: "Course is {{ COURSE }}, duration is {{ DURATION }} and Trainer is {{ TRAINER }}"
