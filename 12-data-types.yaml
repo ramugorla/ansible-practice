@@ -5,15 +5,15 @@
     COURSE: "Devops with Cloud"
     DURATION: 120
     live: true
-  topics:
-    - Terraform
-    - shell
-    - ansible
-    - Linux
-  tools:
-    ci/cd: Jenkins
-    cloud: aws
-    linux: shell
+    topics:
+      - Terraform
+      - shell
+      - ansible
+      - Linux
+    tools:
+      ci/cd: Jenkins
+      cloud: aws
+      linux: shell
   tasks:
     - name: printing data types information
       ansible.builtin.debug:
