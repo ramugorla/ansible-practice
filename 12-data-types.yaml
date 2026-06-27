@@ -1,0 +1,20 @@
+- name: all data types information
+  hosts: local
+  connection: local
+  vars:
+    COURSE: "Devops with Cloud"
+    DURATION: 120
+  live: true
+  topics:
+    - Terraform
+    - shell
+    - ansible
+    - Linux
+  tools:
+    ci/cd: Jenkins
+    cloud: aws
+    linux: shell
+  tasks:
+    - name: printing data types information
+      ansible.builtin.debug:
+        msg: "Course is {{ COURSE }} Duration is {{ DURATION }} topics are {{ topics }} is it live? {{ live }}and tools are {{ tools }}"
