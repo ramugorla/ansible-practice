@@ -3,11 +3,11 @@
   connection: local
   vars_prompt: 
     - name: my_number
-      prompt: "please enter number:: "
+      prompt: "please enter number:"
   tasks:
     - name: Convert user prompt string to integer
       ansible.builtin.set_fact:
-        user_integer: "{{ my_number | ansible.builtin.int }}"
+        user_integer: "{{ my_number | int }}"
       register: user_integer
     - name: print if number is greater than 10 
       ansible.builtin.debug:
