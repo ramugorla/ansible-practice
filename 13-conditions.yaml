@@ -1,6 +1,7 @@
 - name: Convert Prompt String to Integer
   hosts: local
   connection: local
+  gather_facts: false
   
   vars_prompt:
     - name: user_input
