@@ -1,25 +1,19 @@
-- name: print the number greater than 10 
+- name: Convert Prompt String to Integer
   hosts: local
   connection: local
-  vars_prompt: 
-    - name: my_number
-      prompt: "please enter number:"
-  tasks:
-      - name: Convert user prompt string to integer
-        ansible.builtin.set_fact:
-          user_integer: "{{ my_number | int }}"
-
-      - name: Print if number is greater than 10
-        ansible.builtin.debug:
-          msg: "Number is greater than 10"
-        when: user_integer > 10
   
-    # - name: print if number is greater than 10 
-    #   ansible.builtin.debug:
-    #     msg: "Given number {{ my_number }} is greater than 10"
-    #   when: user_integer > 10 
-    # - name: print if number less than or eqaul to 10 
-    #   ansible.builtin.debug:
-    #     msg: "Given number {{ my_number }} is less than or eqaul to 10"
-    #   when: user_integer <= 10 
+  vars_prompt:
+    - name: user_input
+      prompt: "Enter a number"
+      private: false
 
+  tasks:
+    - name: Convert string to integer and save as a fact
+      ansible.builtin.set_fact:
+        my_integer: "{{ user_input | int }}"
+
+    - name: Display the variable type and value
+      ansible.builtin.debug:
+        msg: 
+          - "Raw value from prompt: {{ user_input }}"
+          - "Converted integer value: {{ my_integer }}"
