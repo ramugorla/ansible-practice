@@ -12,8 +12,10 @@
       ansible.builtin.set_fact:
         my_integer: "{{ user_input | int }}"
 
-    - name: Display the variable type and value
+  
+    - name: print if number is greater than 10 
       ansible.builtin.debug:
-        msg: 
-          - "Raw value from prompt: {{ user_input }}"
-          - "Converted integer value: {{ my_integer }}"
+        msg: "Given number {{ my_number }} is greater than 10"
+      when: user_input > 10 
+   
+
