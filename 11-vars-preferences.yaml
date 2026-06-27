@@ -3,8 +3,8 @@
   connection: local
   vars: 
     GREET: "PLAYS"
-  vars_files:
-    - course.yaml
+  # vars_files:
+  #   - course.yaml
   vars_prompt:
     - name: GREET
       prompt: Please eneter wishes
@@ -19,3 +19,4 @@
 
 #1. Arguments
 #2. TASKS
+#3. Files
