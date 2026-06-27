@@ -11,11 +11,15 @@
     - name: Convert string to integer and save as a fact
       ansible.builtin.set_fact:
         my_integer: "{{ user_input | int }}"
+      register: my_integer
 
   
-    - name: print if number is greater than 10 
-      ansible.builtin.debug:
-        msg: "Given number {{ user_input }} is greater than 10"
-      when: my_integer > 10 
+    # - name: print if number is greater than 10 
+    #   ansible.builtin.debug:
+    #     msg: "Given number {{ user_input }} is greater than 10"
+    #   when: my_integer > 10 
    
 
+    - name: print 
+      ansible.builtin.debug:
+        msg: "{{ my_integer }}"
