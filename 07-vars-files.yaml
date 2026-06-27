@@ -1,7 +1,7 @@
 - name: varaibles from Files
   hosts: local
   connection: local
-  vars:
+  vars_files:
     - course.yaml
   tasks:
     - name: printing aws course information 
