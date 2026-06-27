@@ -13,7 +13,7 @@
       ansible.builtin.debug:
         msg: "Course is {{ COURSE }}, duration is {{ DURATION }} and Trainer is {{ TRAINER }}"
   
-  tasks:
+  
     - name: PLAYS variables
       ansible.builtin.debug:
         msg: "Course is {{ COURSE }}, duration is {{ DURATION }} and Trainer is {{ TRAINER }}"
